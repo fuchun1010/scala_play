@@ -1,11 +1,10 @@
 package com.fullsample.app
 
+import com.fullsample.domain.DirToolKit
 
-object Main extends App {
 
-  import com.fullsample.tool.implicits._
+object Main extends App with DirToolKit {
 
-  val date = "1992-11-12".toDate
-  println(date)
+  println(uploadDir)
 }
 
