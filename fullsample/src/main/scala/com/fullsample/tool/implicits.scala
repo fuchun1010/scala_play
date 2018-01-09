@@ -17,4 +17,10 @@ object implicits {
     def toFile: File = new File(filePath)
   }
 
+  implicit def functionBody2Runnable(fun: () => Unit): Runnable = new Runnable {
+    override def run(): Unit = fun()
+  }
+
+
+
 }

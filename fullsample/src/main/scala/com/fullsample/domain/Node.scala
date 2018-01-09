@@ -20,6 +20,13 @@ case class Node[T](id: String,
     }
   }
 
+  override def equals(that: scala.Any) = {
+    that match {
+      case node: Node[T] => node.id.equals(this.id)
+      case _ => false
+    }
+  }
+
   override def toString = {
     val sb = new StringBuilder
     sb.append(" id: ")
