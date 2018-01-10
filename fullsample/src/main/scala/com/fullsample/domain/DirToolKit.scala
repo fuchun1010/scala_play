@@ -19,6 +19,16 @@ trait DirToolKit {
     }
   }
 
+  def dataDir(dataDirName: String): String = rootDir + "parquet" + File.separator + dataDirName
+
+  def snappyDir(): String = {
+    val locatorDirPath = rootDir + "snappyLocator" + File.separator
+    val fileDir = new File(locatorDirPath)
+    if (!fileDir.exists()) {
+      fileDir.mkdirs()
+    }
+    return fileDir.getAbsolutePath
+  }
 }
 
 

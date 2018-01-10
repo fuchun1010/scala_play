@@ -23,6 +23,8 @@
         <log-4j>1.7.25</log-4j>
         <spring-boot>1.5.8.RELEASE</spring-boot>
         <scala-plugin>3.2.1</scala-plugin>
+        <scala-version>2.11</scala-version>
+        <slf4j>1.7.25</slf4j>
     </properties>
 
     <build>
@@ -72,9 +74,25 @@
                     <jdkLevel>${jdk.version}</jdkLevel>
                 </configuration>
             </plugin>
-            
+
         </plugins>
     </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.snappydata</groupId>
+            <artifactId>snappydata-core_${scala-version}</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.snappydata</groupId>
+            <artifactId>snappydata-cluster_${scala-version}</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+
+
+    </dependencies>
 
 
 </project>
