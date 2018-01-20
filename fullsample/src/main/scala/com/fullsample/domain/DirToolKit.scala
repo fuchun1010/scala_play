@@ -19,7 +19,7 @@ trait DirToolKit {
     }
   }
 
-  def dataDir(dataDirName: String): String = rootDir + "parquet" + File.separator + dataDirName
+  def dataDir(dirName: String): String = rootDir + "parquet" + File.separator + dirName
 
   def snappyDir(): String = {
     val locatorDirPath = rootDir + "snappyLocator" + File.separator
